@@ -82,59 +82,87 @@ nav ul {
     display: flex;
 }
 
-nav li {
-    margin-right: 20px; /* Adjust margin as needed */
-}
-
 nav a {
 	font-family: noto sans;
     text-decoration: none;
     color: black; /* You can customize the text color */
-    font-weight: medium; /* You can adjust the font weight */
     display: flex;
     align-items: center;
-	padding-right: 1.5rem;
+	margin-right: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+nav a:hover{
+    padding: 0rem .7rem; /* Adjust padding as needed */
+    background-color: #6E48AA; /* You can customize the background color */
+    color: white; /* You can customize the text color */
+    border-radius: 8px; /* Adjust border-radius for rounded corners */
+    text-decoration: none;
+    transition: background-color 1s ease; /* Smooth transition effect on hover */
 }
 
 svg {
     margin-right: 5px; /* Adjust margin as needed */
 }
 
-.portfoliobutton {
-    padding: 0px 15px; /* Adjust padding as needed */
-    background-color: #6E48AA; /* You can customize the background color */
-    color: white; /* You can customize the text color */
-    border-radius: 8px; /* Adjust border-radius for rounded corners */
-    text-decoration: none;
-    transition: background-color 0.3s ease; /* Smooth transition effect on hover */
-	margin-right: 1rem;
+/* Style for the modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    transition: transform 0.5s ease;
 }
 
-.portfoliobutton:hover {
-    background-color: #9b66f0; /* Change background color on hover */
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    margin-top: 7rem;
+    width: 30%;
+    max-width: 700px;
+    transition: transform 0.5s ease;
 }
 
-#imageContainer {
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
     text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.5s ease; /* Smooth transition for the background color */
 }
 
-#profileImage {
-    transition: transform 0.5s ease; /* Smooth transition for scaling*/
-}
 
-#profileImage.enlarged {
-    position: fixed;
-    top: 30%;
-	left: 30%;
-	transform: translate(-50%, -50%);
-    width: 40%;
-    height: 40%;
-    object-fit: contain;
-    z-index: 1000;
-    transform: scale(1.5); /* Adjust the scale factor for the enlarged image */
-}
+
+
 
 
 /* End of nav bar styles */
